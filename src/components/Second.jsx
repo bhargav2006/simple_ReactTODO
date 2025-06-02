@@ -1,6 +1,6 @@
 import React from "react";
 import "./todo.css";
-import "./todo_media_css";
+import "./todo_media_css.css";
 import micon from "../media/snapmale1.jpg";
 // "./White_Round_male_User_Profile_Icon.png";
 

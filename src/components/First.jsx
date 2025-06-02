@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./index_media_css.css";
 import "./First.css";
 import React from "react";
 import entryvideo from "../media/entryvideo.mp4";

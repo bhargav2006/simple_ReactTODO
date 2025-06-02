@@ -1,0 +1,45 @@
+/* Tablet styles (portrait and landscape) */
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    font-size: 2.2rem !important;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  video {
+    max-width: 250px !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+  .container {
+    padding: 0 5px;
+  }
+  .row.align-items-center {
+    min-height: unset !important;
+    flex-direction: column;
+  }
+  .col-md-6 {
+    margin-bottom: 1rem;
+  }
+  video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  form {
+    padding: 0 5px;
+  }
+  .form-group,
+  .form-group.col-md-5 {
+    width: 100%;
+  }
+}

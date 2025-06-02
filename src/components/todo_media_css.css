@@ -1,0 +1,66 @@
+/* Tablet styles */
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    font-size: 2rem !important;
+  }
+  .dropdown-menu {
+    min-width: 180px;
+    font-size: 1rem;
+  }
+  #addtask {
+    font-size: 1.1rem;
+    max-width: 300px;
+  }
+  #addform input {
+    width: 60% !important;
+    font-size: 1rem;
+  }
+  #tasklist {
+    max-width: 300px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+  .dropdown-menu {
+    min-width: 140px;
+    font-size: 0.95rem;
+    right: 0 !important;
+    left: auto !important;
+  }
+  .btn-link img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  #addtask {
+    font-size: 1rem;
+    max-width: 95vw;
+    padding: 0.5rem 0.8rem;
+  }
+  #addform input {
+    width: 90% !important;
+    font-size: 0.95rem;
+  }
+  #tasklist {
+    max-width: 95vw;
+    font-size: 0.95rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #tasklist-heading {
+    font-size: 1rem;
+  }
+  .task {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+  .delbtn {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    padding: 2px 8px;
+  }
+}
