@@ -3,14 +3,14 @@ import "./index_media_css.css";
 import "./First.css";
 import React from "react";
 import entryvideo from "../media/entryvideo.mp4";
+import wallpaper from "../media/firstwallpaper.jpg";
 
 export default function First() {
   const navigate = useNavigate();
 
   const bg = {
     minHeight: "100vh",
-    backgroundImage:
-      "url('https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/lava-abstract-formation-8k-2560x1600/23136-11.jpg')",
+    backgroundImage: `url('${wallpaper}')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };

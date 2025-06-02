@@ -2,13 +2,14 @@ import React from "react";
 import "./todo.css";
 import "./todo_media_css.css";
 import micon from "../media/snapmale1.jpg";
+import wallpaper from "../media/secondwallpaper.jpg";
 
 import fmicon from "../media/snapfemale1.jpg";
 
 export default function Test1() {
   //styles
   const bg = {
-    backgroundImage: "url('https://wallpapercave.com/wp/wp12818169.jpg')",
+    backgroundImage: `url('${wallpaper}')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
