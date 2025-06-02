@@ -1,8 +1,11 @@
 import React from "react";
 import "./todo.css";
 import "./todo_media_css";
-import micon from "./White_Round_male_User_Profile_Icon.png";
-import fmicon from "./White_Round_Female_User_Profile_Icon.png";
+import micon from "../media/snapmale1.jpg";
+// "./White_Round_male_User_Profile_Icon.png";
+
+import fmicon from "../media/snapfemale1.jpg";
+// "./White_Round_Female_User_Profile_Icon.png";
 
 export default function Test1() {
   //styles
@@ -100,8 +103,9 @@ export default function Test1() {
             onClick={() => setdbtnshow(!dbtn)}>
             <img
               src={userIcon}
+              className="rounded-circle"
               alt="icon"
-              style={{ width: "35px", height: "35px" }}
+              style={{ width: "50px", height: "50px" }}
             />
           </button>
           <ul
