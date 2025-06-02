@@ -1,45 +1,79 @@
-/* Tablet styles (portrait and landscape) */
-@media (max-width: 991.98px) {
+/* Small Devices - Mobile Portrait (up to 575px) */
+@media only screen and (max-width: 575px) {
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+
   .navbar-brand {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
   }
-  .container {
-    padding: 0 10px;
-  }
-  .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-bottom: 2rem;
-  }
+
   video {
     max-width: 250px !important;
   }
+
+  .container {
+    padding: 10px;
+  }
 }
 
-/* Mobile styles */
-@media (max-width: 575.98px) {
+/* Medium Devices - Mobile Landscape & Small Tablets (576px - 767px) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
   .navbar-brand {
-    font-size: 1.5rem !important;
+    font-size: 2.5rem !important;
   }
-  .container {
-    padding: 0 5px;
-  }
-  .row.align-items-center {
-    min-height: unset !important;
-    flex-direction: column;
-  }
-  .col-md-6 {
-    margin-bottom: 1rem;
-  }
+
   video {
-    max-width: 100% !important;
-    height: auto !important;
+    max-width: 300px !important;
   }
-  form {
-    padding: 0 5px;
+
+  .form-control {
+    font-size: 15px;
   }
-  .form-group,
-  .form-group.col-md-5 {
-    width: 100%;
+}
+
+/* Tablets (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand {
+    font-size: 3rem !important;
+  }
+
+  video {
+    max-width: 350px !important;
+  }
+
+  .form-control {
+    font-size: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Laptops & Desktops (992px - 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar-brand {
+    font-size: 3.5rem !important;
+  }
+
+  .form-control {
+    font-size: 17px;
+  }
+}
+
+/* Large Desktops (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .navbar-brand {
+    font-size: 4rem !important;
+  }
+
+  .form-control {
+    font-size: 18px;
+  }
+
+  video {
+    max-width: 400px !important;
   }
 }

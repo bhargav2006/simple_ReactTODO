@@ -2,10 +2,8 @@ import React from "react";
 import "./todo.css";
 import "./todo_media_css.css";
 import micon from "../media/snapmale1.jpg";
-// "./White_Round_male_User_Profile_Icon.png";
 
 import fmicon from "../media/snapfemale1.jpg";
-// "./White_Round_Female_User_Profile_Icon.png";
 
 export default function Test1() {
   //styles
@@ -34,9 +32,9 @@ export default function Test1() {
   const [dlist, setdlistshow] = React.useState("");
 
   // data to be used in the component
-  const [showForm, setShowForm] = React.useState(false); // State to control form visibility
-  const [showTaskHd, setShowTaskHd] = React.useState(false); // State to control taskheading visibility
-  const [list, setList] = React.useState([]); // State to manage the task list[]
+  const [showForm, setShowForm] = React.useState(false);
+  const [showTaskHd, setShowTaskHd] = React.useState(false);
+  const [list, setList] = React.useState([]);
 
   // Function to toggle the visibility of the form
   const ToggleForm = () => {
@@ -44,17 +42,17 @@ export default function Test1() {
   };
 
   // Function to handle adding a task and updating the task list and hiding the form
-  const tasktxt = React.useRef(); // Ref to access the input field for task text
+  const tasktxt = React.useRef();
   // (useref is best for function and createref is best for class components)
   const handleAdd = () => {
     if (tasktxt.current.value.trim() === "") {
       alert("Please enter a task before adding.");
-      return; // Exit if the input is empty
+      return;
     } else {
       setList([...list, `${tasktxt.current.value}`]);
-      ToggleForm(); // Hide the form after adding a task
+      ToggleForm();
       if (list.length === 0) {
-        setShowTaskHd(true); // Show the task heading if the list was empty before adding a task
+        setShowTaskHd(true);
       }
     }
   };
@@ -63,22 +61,22 @@ export default function Test1() {
   const handleDelete = (indexToRemove) => {
     const updatedList = list.filter((_, index) => index !== indexToRemove);
     setList(updatedList);
-    setShowTaskHd(updatedList.length > 0); // Show the task heading if the list was empty before adding a task
+    setShowTaskHd(updatedList.length > 0);
   };
 
   //useEffect to execute when the page loads
   React.useEffect(() => {
-    // alert(
-    //   `Welcome to the Todo App!${name},
-    //    You can add tasks, delete them, and view your tasks here.`
-    // );
+    alert(
+      `Welcome to the Todo App!${name},
+       You can add tasks, delete them, and view your tasks here.`
+    );
   });
 
   //useEffect to clear the input field and focus on it when the form is toggled
   React.useEffect(() => {
-    tasktxt.current.value = ""; // Clear the input field when toggling the form
-    tasktxt.current.focus(); // Focus on the input field when the form is shown
-  }, [showForm]); // Effect to log the showform whenever it changes
+    tasktxt.current.value = "";
+    tasktxt.current.focus();
+  }, [showForm]);
 
   // useEffect to update the dropdown list visibility based on the button state
   React.useEffect(() => {
@@ -94,7 +92,6 @@ export default function Test1() {
           style={navbarStyle}>
           Hello, {name ? name : "Guest"}!
         </span>
-        {/* Display user information in the navbar */}
         <div className="dropdown">
           <button
             className="btn btn-link rounded-circle "

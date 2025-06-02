@@ -1,66 +1,84 @@
-/* Tablet styles */
-@media (max-width: 991.98px) {
-  .navbar-brand {
-    font-size: 2rem !important;
+#addform input {
+  width: 90% !important;
+}
+
+#tasklist {
+  padding: 0;
+  width: 90%;
+}
+
+/* Tablets: min-width 600px */
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 17px;
   }
-  .dropdown-menu {
-    min-width: 180px;
-    font-size: 1rem;
-  }
-  #addtask {
-    font-size: 1.1rem;
-    max-width: 300px;
-  }
+
   #addform input {
-    width: 60% !important;
-    font-size: 1rem;
+    width: 70% !important;
   }
+
   #tasklist {
-    max-width: 300px;
-    font-size: 1rem;
+    width: 70%;
+  }
+
+  .navbar-brand {
+    font-size: 2.5rem;
   }
 }
 
-/* Mobile styles */
-@media (max-width: 575.98px) {
-  .navbar-brand {
-    font-size: 1.2rem !important;
+/* Small laptops and landscape tablets: min-width 768px */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
   }
-  .dropdown-menu {
-    min-width: 140px;
-    font-size: 0.95rem;
-    right: 0 !important;
-    left: auto !important;
-  }
-  .btn-link img {
-    width: 36px !important;
-    height: 36px !important;
-  }
-  #addtask {
-    font-size: 1rem;
-    max-width: 95vw;
-    padding: 0.5rem 0.8rem;
-  }
+
   #addform input {
-    width: 90% !important;
-    font-size: 0.95rem;
+    width: 60% !important;
   }
+
   #tasklist {
-    max-width: 95vw;
-    font-size: 0.95rem;
-    padding-left: 0;
-    padding-right: 0;
+    width: 60%;
   }
-  #tasklist-heading {
-    font-size: 1rem;
+
+  .navbar-brand {
+    font-size: 3rem;
   }
-  .task {
-    font-size: 0.95rem;
-    word-break: break-word;
+}
+
+/* Laptops / Desktops: min-width 992px */
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 19px;
   }
-  .delbtn {
-    font-size: 0.9rem;
-    margin-left: 10px;
-    padding: 2px 8px;
+
+  #addform input {
+    width: 40% !important;
+  }
+
+  #tasklist {
+    width: 40%;
+  }
+
+  .navbar-brand {
+    font-size: 3.5rem;
+  }
+}
+
+/* Large desktops and 4K displays or mobile in desktop view: min-width 1200px */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+
+  #addform input {
+    width: 30% !important;
+  }
+
+  #tasklist {
+    width: 30%;
+  }
+
+  .navbar-brand {
+    font-size: 4rem;
   }
 }
