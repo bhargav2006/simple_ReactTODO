@@ -68,10 +68,10 @@ export default function Test1() {
   //useEffect to execute when the page loads
   React.useEffect(() => {
     alert(
-      `Welcome to the Todo App!${name},
-       You can add tasks, delete them, and view your tasks here.`
+      `Welcome to the Todo App, ${name} !
+You can add your tasks here and delete them when you are done`
     );
-  });
+  }, [name]);
 
   //useEffect to clear the input field and focus on it when the form is toggled
   React.useEffect(() => {
