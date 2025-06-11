@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { ToastContainer , toast } from "react-toastify";
+
 import "./index_media_css.css";
 import "./First.css";
 import React from "react";
@@ -46,8 +48,25 @@ export default function First() {
     navigate("/2");
   };
 
+ //useEffect to execute when the page loads
+  React.useEffect(() => {
+toast(` 👋 Welcome to the Todo App !
+Please fill in your details to get started.`,
+{
+  position: "top-center",
+  autoClose: 3000, 
+  theme: "dark",
+  style: {
+    border: '1px solid #4CAF50',
+    padding: '16px',
+    backgroundColor: '#333',
+    color: '#fff',
+  },
+});
+  });
   return (
     <div style={bg}>
+      <ToastContainer />
       <nav className="navbar navbar-expand-lg justify-content-center">
         <span className="navbar-brand mx-auto" style={navbarStyle}>
           Hello!

@@ -7,6 +7,12 @@ if browser router those dont work use this-
 *npm install react-router-dom
 in terminal
 
+//toast library
+*install:- npm i react-toastify
+npm install --save react-toastify
+i dont know which i do have to install
+
+
 when we want to navigate to another page-
 *function---(rfc)
 -import { useNavigate } from "react-router-dom";

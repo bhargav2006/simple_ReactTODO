@@ -1,9 +1,10 @@
 import React from "react";
+import { ToastContainer , toast } from "react-toastify";
+
 import "./todo.css";
 import "./todo_media_css.css";
 import micon from "../media/snapmale1.jpg";
 import wallpaper from "../media/secondwallpaper.jpg";
-
 import fmicon from "../media/snapfemale1.jpg";
 
 export default function Test1() {
@@ -29,27 +30,43 @@ export default function Test1() {
   const gender = localStorage.getItem("usergender");
   const userIcon = gender === "Female" ? fmicon : micon;
 
+  // data to be used in the component
   const [dbtn, setdbtnshow] = React.useState(false);
   const [dlist, setdlistshow] = React.useState("");
 
-  // data to be used in the component
   const [showForm, setShowForm] = React.useState(false);
   const [showTaskHd, setShowTaskHd] = React.useState(false);
   const [list, setList] = React.useState([]);
 
-  // Function to toggle the visibility of the form
   const ToggleForm = () => {
     setShowForm(!showForm);
   };
 
   // Function to handle adding a task and updating the task list and hiding the form
   const tasktxt = React.useRef();
-  // (useref is best for function and createref is best for class components)
   const handleAdd = () => {
     if (tasktxt.current.value.trim() === "") {
-      alert("Please enter a task before adding.");
+      toast.error(
+        "Please enter a task before adding."
+      ,{
+        autoClose: 2000,
+        theme: "dark",
+      style: {
+        border: '1px solid #713200',
+        padding: '16px',
+      },
+      iconTheme: {
+        primary: '#713200',
+        secondary: '#FFFAEE',
+      },
+    });
       return;
     } else {
+      toast.success("Task added successfully!", {
+        position: "top-right",
+        autoClose: 2000,
+        theme: "dark",
+      });
       setList([...list, `${tasktxt.current.value}`]);
       ToggleForm();
       if (list.length === 0) {
@@ -60,6 +77,14 @@ export default function Test1() {
 
   // Function to handle task deletion
   const handleDelete = (indexToRemove) => {
+    toast.success("You Finished a Task successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+      theme: "dark",
+      style: {
+        border: '1px solid green',
+        padding: '16px', }
+      });
     const updatedList = list.filter((_, index) => index !== indexToRemove);
     setList(updatedList);
     setShowTaskHd(updatedList.length > 0);
@@ -67,10 +92,19 @@ export default function Test1() {
 
   //useEffect to execute when the page loads
   React.useEffect(() => {
-    alert(
-      `Welcome to the Todo App, ${name} !
-You can add your tasks here and delete them when you are done`
-    );
+toast(` 👋 Welcome to the Todo App, ${name} !
+You can add your tasks here and delete them when you are done`,
+{
+  position: "top-center",
+  autoClose: 3000, 
+  theme: "dark",
+  style: {
+    border: '1px solid #4CAF50',
+    padding: '16px',
+    backgroundColor: '#333',
+    color: '#fff',
+  },
+});
   }, [name]);
 
   //useEffect to clear the input field and focus on it when the form is toggled
@@ -86,6 +120,7 @@ You can add your tasks here and delete them when you are done`
 
   return (
     <div style={bg}>
+    <ToastContainer />
       <nav className="navbar navbar-expand-lg justify-content-center">
         <span
           className="navbar-brand mx-auto"
@@ -112,23 +147,25 @@ You can add your tasks here and delete them when you are done`
               right: "0",
               justifyContent: "center",
               alignItems: "center",
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+              border: "1px solid aqua",
             }}>
-            <li className="bi bi-person dropdown-item">
+            <li className="bi bi-person dropdown-item" style={{ color: "aliceblue" }}>
               {" "}
               Name: {name ? name : "Guest"}
             </li>
-            <li className="bi bi-envelope dropdown-item">
+            <li className="bi bi-envelope dropdown-item" style={{ color: "aliceblue" }}>
               {" "}
               Email: {email ? email : "Null"}
             </li>
-            <li className="bi bi-telephone dropdown-item">
+            <li className="bi bi-telephone dropdown-item" style={{ color: "aliceblue" }}>
               {" "}
               Phone: {ph ? ph : "Null"}
             </li>
             <li
               className={`bi bi-gender-${
                 gender.toLowerCase() ? gender.toLowerCase() : "male"
-              } dropdown-item`}>
+              } dropdown-item`} style={{ color: "aliceblue" }}>
               {" "}
               Gender: {gender ? gender : "others"}
             </li>
